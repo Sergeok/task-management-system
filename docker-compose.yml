@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: my_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  task-management-system:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: task-management-system
+    environment:
+      SPRING_CONFIG_LOCATION: classpath:/docker/application.properties
+    ports:
+      - "8081:8080"
+
+volumes:
+  pgdata:
