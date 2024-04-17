@@ -43,7 +43,7 @@ public class TaskDto {
 
     @FutureOrPresent(
             groups = {Create.class, Update.class},
-            message = "Дата выполнения не может быть раньше текущей"
+            message = "Дата исполнения не может быть раньше текущей"
     )
     private LocalDateTime dueDate;
 

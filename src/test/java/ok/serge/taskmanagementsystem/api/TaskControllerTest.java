@@ -112,7 +112,7 @@ class TaskControllerTest {
                 .andExpect(jsonPath("Ошибка", Matchers.containsString("Превышена максимальная длина заголовка")))
                 .andExpect(jsonPath("Ошибка", Matchers.containsString("Статус не задан")))
                 .andExpect(jsonPath("Ошибка", Matchers.containsString("Превышена максимальная длина описания")))
-                .andExpect(jsonPath("Ошибка", Matchers.containsString("Дата выполнения не может быть раньше текущей")));
+                .andExpect(jsonPath("Ошибка", Matchers.containsString("Дата исполнения не может быть раньше текущей")));
     }
 
     @Test
@@ -144,7 +144,7 @@ class TaskControllerTest {
                 .andExpect(jsonPath("Ошибка", Matchers.containsString("Превышена максимальная длина заголовка")))
                 .andExpect(jsonPath("Ошибка", Matchers.containsString("Статус не задан")))
                 .andExpect(jsonPath("Ошибка", Matchers.containsString("Превышена максимальная длина описания")))
-                .andExpect(jsonPath("Ошибка", Matchers.containsString("Дата выполнения не может быть раньше текущей")));
+                .andExpect(jsonPath("Ошибка", Matchers.containsString("Дата исполнения не может быть раньше текущей")));
     }
 
     @Test
